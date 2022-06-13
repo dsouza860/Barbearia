@@ -10,101 +10,133 @@
         android:id="@+id/imageButton"
         android:layout_width="106dp"
         android:layout_height="88dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="36dp"
         android:backgroundTint="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_servico"
         app:srcCompat="@drawable/barbeiro_01_removebg_preview__2_" />
 
     <TextView
-        android:id="@+id/btn_Rodrigo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Rodrigo"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Leonardo" />
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        tools:layout_editor_absoluteX="0dp" />
 
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="106dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="4dp"
-        android:background="#00FFFFFF"
-        android:src="@drawable/barbeiro_3_removebg_preview__1_"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"
+        android:layout_marginTop="28dp"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
         tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/btn_Lucas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="172dp"
         android:fontFamily="sans-serif-black"
         android:text="Lucas"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Rodrigo" />
-
-    <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="106dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="4dp"
-        android:background="#00FFFFFF"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
-        app:srcCompat="@drawable/barbeiro_4_removebg_preview"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <TextView
-        android:id="@+id/btn_Leonardo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Leonardo"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="106dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="4dp"
-        android:background="#00FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
-        app:srcCompat="@drawable/barbeiro_2_removebg_preview__1_" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/btn_David"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="64dp"
         android:fontFamily="sans-serif-black"
         android:text="David"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toEndOf="@+id/imageButton4"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Lucas" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="106dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/barbeiro_3_removebg_preview__1_"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="106dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/barbeiro_2_removebg_preview__1_" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="106dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@drawable/barbeiro_4_removebg_preview" />
+
+    <TextView
+        android:id="@+id/btn_Leonardo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Leonardo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/btn_servico" />
+
+    <TextView
+        android:id="@+id/btn_Rodrigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Rodrigo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/btn_servico"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="44dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"

@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="374dp"
-        android:layout_height="284dp"
+        android:layout_width="406dp"
+        android:layout_height="322dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,10 +21,11 @@
         android:id="@+id/btn_Agendar"
         android:layout_width="140dp"
         android:layout_height="129dp"
+        android:layout_marginTop="80dp"
         android:backgroundTint="@color/black"
         app:icon="@drawable/calendario"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
@@ -37,9 +38,9 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_Agendar"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.004" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
