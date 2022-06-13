@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    app:circularflow_angles="@string/appbar_scrolling_view_behavior"
+    tools:context=".Servicos">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tesoura_e_pente" />
+
+    <TextView
+        android:id="@+id/btn_corte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Corte de Cabelo"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_corte_barba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="sans-serif-black"
+        android:text="  Corte de Cabelo + Barba "
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="40dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:srcCompat="@drawable/tesoura_e_navalha_easy_resize_co" />
+
+    <TextView
+        android:id="@+id/btn_barba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Barba Completa Navalha "
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:srcCompat="@drawable/navalha" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:srcCompat="@drawable/maquina" />
+
+    <TextView
+        android:id="@+id/btn_corte_maquina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Corte Maquina"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="4px"
+        android:layout_marginTop="32dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/btn_corte"
+        tools:layout_editor_absoluteX="12dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="4px"
+        android:layout_marginTop="32dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/btn_corte_barba"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="4px"
+        android:layout_marginTop="32dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/btn_barba"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="4px"
+        android:layout_marginTop="32dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/btn_corte_maquina"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/etVCorte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="sans-serif-black"
+        android:text="R$ 30,00"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.728"
+        app:layout_constraintStart_toEndOf="@+id/btn_corte"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/etVCorteBarba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="sans-serif-black"
+        android:text="R$ 50,00"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/btn_corte_barba"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/etVBarba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="sans-serif-black"
+        android:text="R$ 25,00"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toEndOf="@+id/btn_barba"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/etVMaquina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="sans-serif-black"
+        android:text="R$ 20,00"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.744"
+        app:layout_constraintStart_toEndOf="@+id/btn_corte_maquina"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

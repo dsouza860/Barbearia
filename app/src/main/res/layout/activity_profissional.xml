@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profissional">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="106dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/barbeiro_01_removebg_preview__2_" />
+
+    <TextView
+        android:id="@+id/btn_Rodrigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Rodrigo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Leonardo" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="106dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="4dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/barbeiro_3_removebg_preview__1_"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/btn_Lucas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Lucas"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Rodrigo" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="106dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="4dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:srcCompat="@drawable/barbeiro_4_removebg_preview"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/btn_Leonardo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Leonardo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="106dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="4dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:srcCompat="@drawable/barbeiro_2_removebg_preview__1_" />
+
+    <TextView
+        android:id="@+id/btn_David"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:fontFamily="sans-serif-black"
+        android:text="David"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Lucas" />
+
+    <Button
+        android:id="@+id/btn_servico"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
