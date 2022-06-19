@@ -3,14 +3,11 @@ package com.example.barbearia;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.widget.Button;
 import android.widget.TextView;
 
-public class Servicos extends AppCompatActivity {
+public class ServicosActivity extends AppCompatActivity {
     TextView btn_corte;
     TextView btn_corte_barba;
     TextView btn_barba;
@@ -31,7 +28,7 @@ public class Servicos extends AppCompatActivity {
         btn_corte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Servicos.this, Profissional.class);
+                Intent intent = new Intent(ServicosActivity.this, ProfissionalActivity.class);
                 intent.putExtra("chave" ,btn_corte.getText().toString());
                 startActivity(intent);
             }
@@ -39,7 +36,7 @@ public class Servicos extends AppCompatActivity {
         btn_corte_barba.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Servicos.this, Profissional.class);
+                Intent intent = new Intent(ServicosActivity.this, ProfissionalActivity.class);
                 intent.putExtra("chave" ,btn_corte_barba.getText().toString());
                 startActivity(intent);
             }
@@ -47,7 +44,7 @@ public class Servicos extends AppCompatActivity {
         btn_barba.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Servicos.this, Profissional.class);
+                Intent intent = new Intent(ServicosActivity.this, ProfissionalActivity.class);
                 intent.putExtra("chave" ,btn_barba.getText().toString());
                 startActivity(intent);
 
@@ -56,7 +53,7 @@ public class Servicos extends AppCompatActivity {
         btn_corte_maquina.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Servicos.this, Profissional.class);
+                Intent intent = new Intent(ServicosActivity.this, ProfissionalActivity.class);
                 intent.putExtra("chave" ,btn_corte_maquina.getText().toString());
                 startActivity(intent);
             }

@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         btn_Agendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Servicos.class);
+                Intent intent = new Intent(MainActivity.this, ServicosActivity.class);
                 startActivity(intent);
             }
         });

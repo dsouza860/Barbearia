@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Barbearia</string>
+    <string name="msg_erro_vazio">Preenchimento obrigatório</string>
 </resources>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:visibility="visible"
     app:circularflow_angles="@string/appbar_scrolling_view_behavior"
-    tools:context=".Servicos">
+    tools:context=".ServicosActivity">
 
     <ImageView
         android:id="@+id/imageView"

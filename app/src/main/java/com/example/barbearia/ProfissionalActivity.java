@@ -6,10 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
-public class Profissional extends AppCompatActivity {
+public class ProfissionalActivity extends AppCompatActivity {
     Button btn_corte;
     TextView btn_Leonardo;
     TextView btn_Rodrigo;
@@ -30,7 +29,7 @@ public class Profissional extends AppCompatActivity {
         btn_Leonardo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Profissional.this, Agendamento.class);
+                Intent intent = new Intent(ProfissionalActivity.this, AgendamentoClienteActivity.class);
                 intent.putExtra("chave1", btn_corte.getText().toString());
                 intent.putExtra("chave2", btn_Leonardo.getText().toString());
                 startActivity(intent);
@@ -39,7 +38,7 @@ public class Profissional extends AppCompatActivity {
         btn_Rodrigo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Profissional.this, Agendamento.class);
+                Intent intent = new Intent(ProfissionalActivity.this, AgendamentoClienteActivity.class);
                 intent.putExtra("chave1", btn_corte.getText().toString());
                 intent.putExtra("chave2", btn_Rodrigo.getText().toString());
                 startActivity(intent);
@@ -48,7 +47,7 @@ public class Profissional extends AppCompatActivity {
         btn_Lucas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Profissional.this, Agendamento.class);
+                Intent intent = new Intent(ProfissionalActivity.this, AgendamentoClienteActivity.class);
                 intent.putExtra("chave1", btn_corte.getText().toString());
                 intent.putExtra("chave2", btn_Lucas.getText().toString());
                 startActivity(intent);
@@ -57,7 +56,7 @@ public class Profissional extends AppCompatActivity {
         btn_David.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Profissional.this, Agendamento.class);
+                Intent intent = new Intent(ProfissionalActivity.this, AgendamentoClienteActivity.class);
                 intent.putExtra("chave1", btn_corte.getText().toString());
                 intent.putExtra("chave2", btn_David.getText().toString());
                 startActivity(intent);

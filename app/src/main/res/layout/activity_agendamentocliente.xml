@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Agendamento">
+    tools:context=".AgendamentoClienteActivity">
 
     <Button
         android:id="@+id/btn_Barbeiro_Agendado"
@@ -21,9 +21,10 @@
         android:id="@+id/etHora"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-black"
+        android:inputType="time"
         android:onClick="abrirHora"
+        android:selectAllOnFocus="false"
         android:text="Selecione o Horário"
         android:textAlignment="center"
         android:textSize="18dp"
@@ -36,14 +37,14 @@
         android:id="@+id/etData"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-black"
+        android:inputType="date"
         android:onClick="abrirCalendario"
         android:text="Selecione a Data"
         android:textAlignment="center"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
@@ -74,14 +75,46 @@
         android:id="@+id/button3"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:backgroundTint="#03A9F4"
         android:text="Selecione um horário"
         android:textSize="16sp"
         app:icon="@drawable/relogio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edTelefone" />
+
+    <EditText
+        android:id="@+id/edNome"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_Servico_Agendado" />
+
+    <EditText
+        android:id="@+id/edTelefone"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Telefone"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edNome" />
+
+    <ListView
+        android:id="@+id/lvClientesAgendados"
+        android:layout_width="350dp"
+        android:layout_height="353dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Confirmar"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
