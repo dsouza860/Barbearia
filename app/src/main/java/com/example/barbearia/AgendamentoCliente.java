@@ -19,7 +19,7 @@ public class AgendamentoCliente extends AgendamentoClienteActivity {
 
     @Override
     public String toString() {
-        return barbeiro +"\n"+"Servico: "+servico +"\n"+"Nome: " + nome + "\n"+"Telefone: " + telefone + "\n"+ "Data: "+ data + "\n" + "Hora: " + agendaHora;
+        return barbeiro +"\n"+"Servico: "+servico +"\n"+"Nome: " + nome + "\n"+"Telefone: " + telefone + "\n"+ "Data: "+ data + "\n" +  agendaHora;
     }
 
     public String getServico() {

@@ -68,13 +68,15 @@
 
     <ListView
         android:id="@+id/lvClientesAgendados"
-        android:layout_width="341dp"
-        android:layout_height="192dp"
+        android:layout_width="339dp"
+        android:layout_height="217dp"
+        android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Confirmar" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_Confirmar"
+        app:layout_constraintVertical_bias="0.363" />
 
     <Button
         android:id="@+id/btn_Confirmar"

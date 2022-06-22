@@ -71,6 +71,7 @@ public class AgendamentoClienteActivity extends AppCompatActivity {
     TextView et_22;
     TextView et_23;
     TextView et_MudaHora;
+
     private List<String> lista = new ArrayList<>();
     private ArrayAdapter<String> adapter;
     String ultimoCaracter = "";
@@ -478,21 +479,6 @@ public class AgendamentoClienteActivity extends AppCompatActivity {
         datePickerDialog.show();
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    public void abrirHora(View view) {
-        Calendar calendar = Calendar.getInstance();
-
-        int hora = calendar.get(Calendar.HOUR_OF_DAY);
-        int minuto = calendar.get(Calendar.MINUTE);
-
-        TimePickerDialog timePickerDialoge = new TimePickerDialog(AgendamentoClienteActivity.this, new TimePickerDialog.OnTimeSetListener() {
-            @Override
-            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                //etHora.setText(hourOfDay + ":" + minute);
-            }
-        }, hora, minuto, true);
-        timePickerDialoge.show();
-    }
 
     public void confirmar() {
         validaCliente();
@@ -504,42 +490,22 @@ public class AgendamentoClienteActivity extends AppCompatActivity {
 
 
     public void validaCliente() {
+
         AgendamentoCliente cliente = new AgendamentoCliente();
         cliente.setBarbeiro(btn_Barbeiro.getText().toString());
         cliente.setServico(btn_Corte.getText().toString());
         cliente.setNome(etNome.getText().toString());
         cliente.setTelefone(etTelefone.getText().toString());
         cliente.setData(et_Data.getText().toString());
-        cliente.setAgendaHora(et_01.getText().toString());
-        cliente.setAgendaHora(et_02.getText().toString());
-        cliente.setAgendaHora(et_03.getText().toString());
-        cliente.setAgendaHora(et_04.getText().toString());
-        cliente.setAgendaHora(et_05.getText().toString());
-        cliente.setAgendaHora(et_06.getText().toString());
-        cliente.setAgendaHora(et_07.getText().toString());
-        cliente.setAgendaHora(et_08.getText().toString());
-        cliente.setAgendaHora(et_09.getText().toString());
-        cliente.setAgendaHora(et_10.getText().toString());
-        cliente.setAgendaHora(et_11.getText().toString());
-        cliente.setAgendaHora(et_12.getText().toString());
-        cliente.setAgendaHora(et_13.getText().toString());
-        cliente.setAgendaHora(et_14.getText().toString());
-        cliente.setAgendaHora(et_15.getText().toString());
-        cliente.setAgendaHora(et_16.getText().toString());
-        cliente.setAgendaHora(et_17.getText().toString());
-        cliente.setAgendaHora(et_18.getText().toString());
-        cliente.setAgendaHora(et_19.getText().toString());
-        cliente.setAgendaHora(et_20.getText().toString());
-        cliente.setAgendaHora(et_21.getText().toString());
-        cliente.setAgendaHora(et_22.getText().toString());
-        cliente.setAgendaHora(et_23.getText().toString());
+        cliente.setAgendaHora(et_Result.getText().toString());
 
-      if(etNome.getText().toString().equals("") || etTelefone.getText().toString().equals("") || et_Data.getText().toString().equals("")){
+      if(etNome.getText().toString().equals("") || etTelefone.getText().toString().equals("") || et_Data.getText().toString().equals("")) {
           Toast toast = Toast.makeText(this, "Campo vazio", Toast.LENGTH_LONG);
-          toast.setGravity(Gravity.CENTER, 0,0);
+          toast.setGravity(Gravity.CENTER, 0, 0);
           toast.show();
 
       }else if(lista.contains("Barbeiro: " + cliente)){
+
           Toast toast = Toast.makeText(this, "Cliente já cadastrado", Toast.LENGTH_LONG);
           toast.setGravity(Gravity.CENTER, 0, 0);
           toast.show();
@@ -549,6 +515,7 @@ public class AgendamentoClienteActivity extends AppCompatActivity {
               toast.setGravity(Gravity.CENTER,0,0);
               toast.show();
           }
+
 
       }
     }
