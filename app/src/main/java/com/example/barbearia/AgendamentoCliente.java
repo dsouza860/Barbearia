@@ -2,24 +2,24 @@ package com.example.barbearia;
 
 public class AgendamentoCliente extends AgendamentoClienteActivity {
 
-    String id, nome, telefone, data, hora, barbeiro, servico;
+    String id, nome, telefone, data, barbeiro,  agendaHora,servico;
 
     AgendamentoCliente(){
 
     }
-    AgendamentoCliente(String id, String nome, String Telefone, String data, String hora, String barbeiro, String servico){
+    AgendamentoCliente(String id, String nome, String Telefone, String data, String agendaHora, String barbeiro, String servico){
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
         this.data = data;
-        this.hora = hora;
+        this.agendaHora = agendaHora;
         this.barbeiro = barbeiro;
         this.servico = servico;
     }
 
     @Override
     public String toString() {
-        return barbeiro +"\n"+"Servico: "+servico +"\n"+"Nome: " + nome + "\n"+"Telefone: " + telefone + "\n"+ "Data: "+ data + "\n" + "Hora: " + hora;
+        return barbeiro +"\n"+"Servico: "+servico +"\n"+"Nome: " + nome + "\n"+"Telefone: " + telefone + "\n"+ "Data: "+ data + "\n" + "Hora: " + agendaHora;
     }
 
     public String getServico() {
@@ -38,12 +38,12 @@ public class AgendamentoCliente extends AgendamentoClienteActivity {
         this.data = data;
     }
 
-    public String getHora() {
-        return hora;
+    public String getAgendaHora() {
+        return agendaHora;
     }
 
-    public void setHora(String hora) {
-        this.hora = hora;
+    public void setAgendaHora(String agendaHora) {
+        this.agendaHora = agendaHora;
     }
 
     public String getBarbeiro() {

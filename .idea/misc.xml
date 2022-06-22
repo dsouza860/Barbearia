@@ -7,9 +7,10 @@
         <entry key="app/src/main/res/drawable/botao_customizado_textview.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/botao_textview.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_agendamento.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_agendamentocliente.xml" value="0.13722826086956522" />
+        <entry key="app/src/main/res/layout/activity_agendamentocliente.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_clientes_agendados 2.xml" value="0.13722826086956522" />
         <entry key="app/src/main/res/layout/activity_clientes_agendados.xml" value="0.13722826086956522" />
+        <entry key="app/src/main/res/layout/activity_lista_de_clientes_agendados.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16893115942028986" />
         <entry key="app/src/main/res/layout/activity_profissional.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_servicos.xml" value="0.18" />

@@ -10,49 +10,17 @@
         android:id="@+id/btn_Barbeiro_Agendado"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="4dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/etHora"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:inputType="time"
-        android:onClick="abrirHora"
-        android:selectAllOnFocus="false"
-        android:text="Selecione o Horário"
-        android:textAlignment="center"
-        android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/etData"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
-
-    <TextView
-        android:id="@+id/etData"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:inputType="date"
-        android:onClick="abrirCalendario"
-        android:text="Selecione a Data"
-        android:textAlignment="center"
-        android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
-
     <Button
         android:id="@+id/btn_Servico_Agendado"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.524"
@@ -60,27 +28,16 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_Barbeiro_Agendado" />
 
     <Button
-        android:id="@+id/btn_Confirmar"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Confirmar"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etData" />
-
-    <Button
-        android:id="@+id/button3"
+        android:id="@+id/et_Data"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#03A9F4"
+        android:onClick="abrirCalendario"
         android:text="Selecione um horário"
         android:textSize="16sp"
         app:icon="@drawable/relogio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edTelefone" />
 
@@ -92,6 +49,7 @@
         android:hint="Nome"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_Servico_Agendado" />
 
@@ -102,19 +60,291 @@
         android:ems="10"
         android:hint="Telefone"
         android:inputType="phone"
+        android:maxLength="13"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edNome" />
 
     <ListView
         android:id="@+id/lvClientesAgendados"
-        android:layout_width="350dp"
-        android:layout_height="353dp"
+        android:layout_width="341dp"
+        android:layout_height="192dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Confirmar"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Confirmar" />
+
+    <Button
+        android:id="@+id/btn_Confirmar"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Confirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Result" />
+
+    <TableLayout
+
+        android:id="@+id/tabelaHorarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="46dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_Data">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            >
+
+            <TextView
+                android:id="@+id/et_01"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="09:00"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_02"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="09:30"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_03"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="10:00"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_04"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="10:30"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/et_05"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="11:00"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_06"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="11:30"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_07"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="12:00"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_08"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="12:30"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/et_09"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="13:00"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_10"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="13:30"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_11"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="14:00"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_12"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="14:30"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/et_13"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="15:00"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_14"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="15:30"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_15"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="16:00"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_16"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="16:30"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/et_17"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="17:00"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_18"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="17:30"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_19"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="18:00"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_20"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="18:30"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/et_21"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="19:00"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_22"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="19:30"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/et_23"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="20:00"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/et_Result"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="4dp"
+        android:textColor="#F44336"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabelaHorarios" />
+
+    <TextView
+        android:id="@+id/et_MudaHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="Deseja mudar Horário"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Confirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/et_Result"
+        app:layout_constraintTop_toBottomOf="@+id/tabelaHorarios"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
